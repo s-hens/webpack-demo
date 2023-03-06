@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-function component() {
+function component1() {
   const element = document.createElement('div');
 
   // Lodash, now imported by this script
@@ -9,4 +9,19 @@ function component() {
   return element;
 }
 
-document.body.appendChild(component());
+document.body.appendChild(component1());
+
+
+
+// Importing my function
+import myName from './myName';
+
+function component2() {
+  const element = document.createElement('div');
+
+  // Using my function
+  element.textContent = myName('Stephanie');
+  return element;
+}
+
+document.body.appendChild(component2());
